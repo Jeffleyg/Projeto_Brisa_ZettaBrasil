@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    /* Aplicando múltiplos backgrounds: gradiente e logo */
+    background-image: 
+        url('logozetta.png'), /* Caminho para sua imagem de logo */
+        linear-gradient(to right, #c3c3e0, hsl(205, 12%, 65%));
+    background-position: 
+        center, /* Centraliza o logo */
+        left; /* Gradiente cobre todo o fundo */
+    background-repeat: 
+        no-repeat, /* O logo não deve se repetir */
+        repeat; /* O gradiente se repete por padrão, mas pode ser omitido */
+    background-size: 
+        15%, /* Tamanho do logo; ajuste conforme necessário */
+        cover; /* O gradiente cobre todo o espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card {
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="date"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus,
+.login-card input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-card button[type="submit"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-card button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login-card-footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-card-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-card-footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style_create_account.css"/>
+</head>
+<body>
+    <div class="login-card-container">
+        <div class="login-card">
+            <h1>Create Your Account</h1>
+            <form id="createAccountForm">
+                <input type="text" placeholder="Email" required>
+                <input type="text" placeholder="Company Name" required>
+                <!-- CNPJ input with pattern for validation -->
+                <input type="text" placeholder="CNPJ" pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="CNPJ should be in the format 00.000.000/0000-00" required>
+                <input type="text" placeholder="ZIP Code" pattern="\d{5}-?\d{3}" title="ZIP Code should be in the format 12345-678 or 12345678" required>
+                <input type="text" placeholder="Address" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Create Account</button>
+            </form>
+            <div class="login-card-footer">
+                Already have an account? <a href="index.html">Sign in here.</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('createAccountForm').onsubmit = function(event) {
+            event.preventDefault();
+            const password = document.querySelector('input[type="password"]').value;
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            alert('Account created successfully!');
+            window.location.href = 'index.html'; // Redirects back to the login
+        }
+    </script>
+</body>
+</html>
