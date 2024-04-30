@@ -1,0 +1,116 @@
+.map {
+    width: 100%;
+    height: 590px;
+  }
+  body {
+    background-color: #f8f9fa;
+  }
+  
+/* Reset básico para os elementos do formulário */
+.filter-form {
+  margin: 20px;
+  padding: 20px;
+  background: #f4f4f4; /* Cor de fundo suave */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.filter-form .form-group {
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+.filter-form label {
+  display: block;
+  font-size: 14px;
+  color: #333; /* Cor do texto para os rótulos */
+  margin-bottom: 5px;
+}
+
+.filter-form input[type="text"],
+.filter-form select {
+  width: 100%; /* Largura completa */
+  padding: 8px; /* Padding interno */
+  border: 1px solid #ccc; /* Borda suave */
+  border-radius: 4px; /* Bordas arredondadas para os inputs */
+  box-sizing: border-box; /* Box sizing para evitar problemas de largura */
+}
+
+.filter-form input[type="text"]:focus,
+.filter-form select:focus {
+  border-color: #0056b3; /* Cor da borda ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+.filter-form button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Cursor do mouse como ponteiro */
+  transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.filter-form button:hover {
+  background-color: #0056b3; /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilo para esconder/mostrar inputs condicionalmente */
+#cityInput {
+  transition: all 0.3s ease; /* Transição suave ao mostrar/esconder */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .filter-form {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+/* Estilos para o formulário draggable */
+.draggable-form {
+  position: absolute;
+  top: 20px; /* Posição inicial */
+  right: 20px;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  cursor: move; /* Indica que o elemento pode ser movido */
+}
+
+/* Estilos adicionais se necessário */
+.draggable-form:hover {
+  opacity: 0.95; /* Leve transparência ao mover */
+}
+
+.draggable-form {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  z-index: 1001; /* Certifique-se que está acima de outros elementos */
+  background-color: rgb(111, 102, 102);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+  .draggable-form {
+    width: auto;
+    left: 5px;
+    right: 5px;
+  }
+}
+
+.location-info {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 300px;
+  z-index: 1001; /* Assegura que está acima de outros elementos */
+}
